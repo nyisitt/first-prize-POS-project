@@ -1,0 +1,385 @@
+/*
+Custom Css
+*/
+.bar{
+    width: 100%;
+    z-index: 1000;
+    position:fixed;
+    top: 0px;
+    background-color: rgb(135, 135, 145);
+    border-radius: 0 0 10px 10px;
+}
+.logo{
+    width: 100px;
+}
+.login{
+    display: flex;
+    justify-content:center;
+    width: 250px;
+    align-items: center;
+}
+.categorysection{
+    background: rgb(204, 210, 212);
+}
+.category-items{
+    border-radius: 15px;
+    background-color: rgb(142, 131, 131);
+    border: 3px solid  rgb(204, 210, 212);
+    transition: .3s;
+    height: 300px;
+    padding: 0;
+
+}
+.category-items img{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.category-items:hover{
+    box-shadow: -5px -5px 20px black inset;
+}
+.menu li,a{
+    list-style: none;
+    text-decoration: none;
+
+}
+
+.menu{
+    position: relative;
+}
+
+.submenu{
+    position: absolute;
+    background:#d0d9e0;
+    width: 280px;
+    display: none;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.submenu li{
+    padding:7px 10px ;
+
+}
+li a{
+    color: azure;
+}
+
+.submenu2{
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    top: 0;
+    background:#d0d9e0;
+    display: none;
+    margin-left: 2px;
+    border-radius: 5px;
+    height: 100%;
+
+}
+.submenu2 li{
+    padding: 5px 10px;
+
+}
+.menu li:hover > .submenu{
+    display: block;
+    animation: sildeup 0.3s ease-in-out;
+}
+.submenu li:hover > .submenu2{
+    display: block;
+    animation: sildeleft 0.3s ease-in-out;
+}
+.card{
+    border: 1px solid black;
+   transition: .6s ;
+}
+.card:hover{
+    box-shadow: 5px 5px 8px black;
+}
+.searchBar{
+   border: none;
+   width: 100%;
+   outline: none;
+   padding: 5px;
+}
+.searchContainer{
+    background-color: white;
+    width: 450px;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+.cleanIcon{
+    display: none;
+}
+.searchIcon{
+    border: none;
+    outline: none;
+    background: transparent;
+
+}
+
+
+@keyframes sildeup{
+    0%{
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes sildeleft{
+    0%{
+        opacity: 0;
+        transform: translateX(18px);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/************************ product list **********/
+.sectionProduct{
+    margin-top: 90px;
+
+}
+.sectionProduct .filter,.products{
+height: 100%;
+margin-bottom: 100px;
+}
+.noData{
+    margin-top: 150px;
+    height: 50vh;
+}
+.filter{
+    margin-top: 30px;
+    padding: 10px;
+
+}
+.products{
+    margin-top: 30px;
+
+    padding: 10px;
+}
+.free{
+    border: 1px solid green;
+    width: 150px;
+    padding: 7px;
+    background-color: #dae0e4;
+    transition: .5s;
+}
+.free:hover{
+    background-color: whitesmoke;
+}
+.price{
+    width: 100px;
+}
+.select{
+    width: 200px;
+    border-radius: 50px;
+    padding: 10px;
+}
+/****************** Single product detail *********/
+.singleContant{
+    margin-top: 80px;
+    border-radius: 5px;
+}
+.brandProduct small{
+    margin-top: 2px;
+    margin-left: 7px;
+}
+.detailsection{
+    background-color:white ;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+.ratingsection{
+    border-radius: 5px;
+    background: rgb(213, 215, 215);
+}
+/*************** User page *********/
+
+.userProfile{
+    padding: 5px;
+    position: relative;
+
+
+}
+.notibell{
+    padding: 10px 3px;
+    position: relative;
+}
+.lang{
+    padding: 10px 3px;
+    position: relative;
+}
+.notibell:hover{
+    cursor: pointer;
+}
+.lang:hover{
+    cursor: pointer;
+}
+.userProfile:hover{
+    cursor:pointer;
+}
+.notiList{
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 200px;
+    padding: 10px;
+    background:#d0d9e0;
+    border-radius: 8px;
+    display: none;
+}
+.langiList{
+    position: absolute;
+    left: -30px;
+    top: 40px;
+    width: 130px;
+    padding: 5px;
+    background:#d0d9e0;
+    border-radius: 8px;
+    display: none;
+}
+.userList{
+position: absolute;
+left: 0;
+top: 60px;
+width: 300px;
+padding: 10px;
+background:#d0d9e0;
+border-radius: 8px;
+display: none;
+
+}
+.lang:hover .langiList{
+    display: block;
+    animation: sildeup 0.3s ease-in-out;
+}
+.notibell:hover .notiList{
+    display: block;
+    animation: sildeup 0.3s ease-in-out;
+}
+.userProfile:hover .userList{
+    display: block;
+    animation: sildeup 0.3s ease-in-out;
+}
+.icon{
+    margin-top: 5px;
+    font-size: 20px;
+}
+.logout {
+    margin-left: 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 300;
+}
+.fa-arrow-left{
+    font-size: 30px;
+    color: black;
+    margin-top: 5px;
+}
+
+.fa-cart-shopping{
+    font-size: 20px;
+}
+.pfmain{
+    margin-top: 90px;
+    padding-bottom: 100px;
+    background: rgb(207, 230, 238);
+}
+.pfTitle{
+    margin-top: 50px;
+
+}
+.pfshow{
+    border-radius: 5px;
+}
+.pfTitle a{
+    color: black;
+}
+.pfTitle a:hover{
+    color: rgb(142, 126, 126);
+}
+.userinput{
+    border-radius: 3px;
+    border: 2px solid black;
+}
+.userselectbox{
+    border: 2px solid black;
+    padding: 3px;
+    border-radius: 3px;
+}
+.fa-shield , .fa-circle-check{
+    font-size: 60px;
+    color: darkslategray;
+}
+.ratingProgress p{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.reviewName{
+    width: 40px;
+    margin-left: 20px;
+}
+.review_time{
+    font-size: 10px;
+}
+.review{
+    background: red;
+    display: flex;
+
+}
+/****************** Notification  ****************/
+.notification{
+    margin-top: 80px;
+  margin-bottom: 20px;
+
+}
+.card-body{
+    padding-top: 5px;
+}
+.badge-pill {
+position: absolute;
+bottom: 10px;
+left: -2px;
+width: 20px;
+height: 25px;
+
+}
+.card-count{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+/************************* Card show lists ************************/
+.cardshow{
+    margin-top: 80px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+/**************************** Delivery section ***********************/
+.delivery{
+    margin-top: 80px;
+}
+/****************************** Post section *****************/
+.postcontainer{
+    margin-top: 80px;
+    padding:20px 20px 50px 20px;
+
+}
+
+
